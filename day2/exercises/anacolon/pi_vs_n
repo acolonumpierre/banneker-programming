@@ -1,0 +1,21 @@
+#create empty arrays of pi and number of points n to fill
+pi = []
+n = []
+#first value of number of points
+i = 100
+while i < 1e8:
+  #calls function to estimate the value of pi
+  pi_v = estimatePi(n = i)
+  #add number of points to array of n
+  n.append(i)
+  #add value of pi to array
+  pi.append(pi_v)
+  #increases number of points used by a factor of 10
+  i *= 10
+
+#plot number of points vs pi estimate on a log scale   
+plt.plot(n, pi)
+plt.xscale('log')
+plt.xlabel('number of points')
+plt.ylabel('pi approximation')
+plt.show()
