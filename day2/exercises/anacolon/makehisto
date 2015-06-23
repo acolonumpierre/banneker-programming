@@ -1,3 +1,7 @@
+import numpy as np
+from numpy import random
+import matplotlib.pyplot as plt
+
 def estimatePi(n = 10000, R = 1.0):
     #number of points
     n = n
