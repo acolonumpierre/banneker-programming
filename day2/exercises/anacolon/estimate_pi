@@ -1,3 +1,6 @@
+import numpy as np
+from numpy import random
+
 #number of points
 n = 10000
 #value of the radius
