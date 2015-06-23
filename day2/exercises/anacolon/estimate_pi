@@ -1,7 +1,7 @@
 #number of points
-n = n
+n = 10000
 #value of the radius
-R = R
+R = 1.0
 #array of random x and y values using numpy.random
 x = np.random.uniform(0.0, 2*R, size = n)
 y = np.random.uniform(0.0, 2*R, size = n)
