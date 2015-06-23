@@ -1,3 +1,5 @@
+from estimate_pi import estimatePi
+
 #create empty arrays of pi and number of points n to fill
 pi = []
 n = []
