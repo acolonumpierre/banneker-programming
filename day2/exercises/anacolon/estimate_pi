@@ -1,17 +1,21 @@
 import numpy as np
 from numpy import random
 
-#number of points
-n = 10000
-#value of the radius
-R = 1.0
-#array of random x and y values using numpy.random
-x = np.random.uniform(0.0, 2*R, size = n)
-y = np.random.uniform(0.0, 2*R, size = n)
-#list of tuples x and y
-points = zip(x,y)
-#find values that lie in circle
-N_c = [i for i in points if (np.sqrt((i[0] - 1.0)**2 + (i[1]-1.0)**2) <= R)]
-#calculate pi using ratio of points in the circle and points in the square
-pi = 4*(float(len(N_c))/len(points))
-print pi
+def estimatePi(n = 10000, R = 1.0):
+    #number of points
+    n = n
+    #value of the radius
+    R = R
+    #array of random x and y values using numpy.random
+    x = np.random.uniform(0.0, 2*R, size = n)
+    y = np.random.uniform(0.0, 2*R, size = n)
+    #list of tuples x and y
+    points = zip(x,y)
+    #find values that lie in circle
+    N_c = [i for i in points if (np.sqrt((i[0] - 1.0)**2 + (i[1]-1.0)**2) <= R)]
+    #separating x and y values for plotting purposes
+    N_c_x = [i[0] for i in N_c]
+    N_c_y = [i[1] for i in N_c]
+    #calculate pi using ratio of points in the circle and points in the square
+    pi = 4*(float(len(N_c))/len(points))
+    return pi
