@@ -29,6 +29,9 @@ while i < 1000:
     n = estimatePi(10000, 1.0)
     nums.append(n)
     i+=1
+stdv = np.std(nums, axis=None, dtype=None, out=None, ddof=0, keepdims=True)
+mean = np.mean(nums,axis=None, dtype=None, out=None, keepdims=True)
+print 'standard deviation: ', stdv, '\n', 'mean: ', mean
 #creates histogram
 plt.hist(nums, bins=25, facecolor = 'm')
 plt.show()
